@@ -3,6 +3,8 @@ let xml_doc;
 //console.log(xml_doc);
 
 function sport_pratique() {
+  console.log(document);
+  console.log(document.getElementById("box_pratique_sport"));
   if (document.getElementById("box_pratique_sport").elements[0].checked) {
     let element_to_show = document.getElementById("q_sport_pratique");
     element_to_show.hidden = false;
