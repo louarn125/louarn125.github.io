@@ -16,7 +16,7 @@ function sport_pratique() {
       //     .getElementsByTagName("sport_pratique")
       //     [idx_xml_question].getAttribute("id"),
       // );
-      console.log(xml.getElementsByTagName("sport_pratique")[idx_xml_question]);
+
       var option = document.createElement("option", {
         value: xml_doc
           .getElementsByTagName("sport_pratique")
