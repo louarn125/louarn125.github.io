@@ -1,6 +1,6 @@
 let ready_htpp_request = false;
-let xml_doc = load_xml_file();
-console.log(xml_doc);
+let xml_doc;
+//console.log(xml_doc);
 
 function sport_pratique() {
   if (document.getElementById("box_pratique_sport").elements[0].checked) {
@@ -27,7 +27,7 @@ function load_xml_file() {
       // j'ai un truc
       ready_htpp_request = true;
       console.log("pas neuille");
-      return xmlhttp.responseXML.getElementsByTagName("data");
+      xml_doc = xmlhttp.responseXML.getElementsByTagName("data");
     } else {
       console.log("neuille");
     }
