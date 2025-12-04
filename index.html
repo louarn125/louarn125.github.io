@@ -6,13 +6,16 @@
     </head>
     <body onload="load_xml_file()">
         <div class="box_questions">
-            <p class="text_questions">
-                Je suis une question
-                <input type="checkbox" aria-label="question_test" />
-            </p>
-            <p class="text_qestions">
-                A quelle fréquence vous entrainez-vous ?
-                <select class="select_questions">
+            <div>
+                <label for="1"> Je suis une question</label>
+                <input id="1" type="checkbox" aria-label="question_test" />
+            </div>
+
+            <div>
+                <label for="2">
+                    A quelle fréquence vous entrainez-vous ?
+                </label>
+                <select id="2" class="select_questions">
                     <option selected>Selectionnez une option</option>
                     <option value="1">Moins d'une heure par semaine</option>
                     <option value="2">Entre 1h et 2h par semaine</option>
@@ -20,10 +23,13 @@
                     <option value="4">Entre 3h et 4h par semaine</option>
                     <option value="5">Plus de 5h par semaine</option>
                 </select>
-            </p>
-            <p class="text_questions">
-                A quelle fréquence pourrez-vous vous entraîner ?
-                <select class="select_questions">
+            </div>
+
+            <div>
+                <label for="3">
+                    A quelle fréquence pourrez-vous vous entraîner ?
+                </label>
+                <select class="select_questions" id="3">
                     <option selected>Selectionnez une option</option>
                     <option value="1">Moins d'une heure par semaine</option>
                     <option value="2">Entre 1h et 2h par semaine</option>
@@ -31,23 +37,18 @@
                     <option value="4">Entre 3h et 4h par semaine</option>
                     <option value="5">Plus de 5h par semaine</option>
                 </select>
-            </p>
+            </div>
 
-            <form
-                id="box_pratique_sport"
-                class="text_questions"
-                onchange="sport_pratique()"
-            >
-                Avez-vous déjà pratiquer un sport ?
-                <input type="checkbox" aria-label="pratique_sport" />
-            </form>
-
-            <p class="test_questions" id="q_sport_pratique" hidden="true">
-                Lequel ?
+            <div id="box_pratique_sport">
+                <label for="4"> Avez-vous déjà pratiquer un sport ? </label>
+                <input type="checkbox" aria-label="pratique_sport" id="4" />
+            </div>
+            <div id="q_sport_pratique" hidden="true">
+                <label for="5"> Lequel ? </label>
                 <select class="custom-select custom-select-sm">
                     <option selected>Selectionnez un sport</option>
                 </select>
-            </p>
+            </div>
         </div>
     </body>
 </html>
