@@ -25,6 +25,8 @@ function load_xml_file() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       // j'ai un truc
       ready_htpp_request = true;
+    } else {
+      console.log("neuille");
     }
   };
   xmlhttp.open("GET", "https://louarn125.github.io/questions.xml", true);
