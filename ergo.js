@@ -1,37 +1,38 @@
-let navbar
+let navbar;
 function CheckScrollY(){
-    navbar = document.getElementById("navbar")
+    navbar = document.getElementById("navbar");
     if(window.scrollY > 20){
-        HideNavbar()
+        HideNavbar();
     }
     else{
-        ShowNavbar()
+        ShowNavbar();
     }
 }
 
 function ShowNavbar(){
-    navbar.removeAttribute("hidden")
+    navbar.removeAttribute("hidden");
 }
 
 function HideNavbar(){
-    navbar.setAttribute("hidden", true)
+    navbar.setAttribute("hidden", true);
 }
 
 //Recuperation de la position de la souris
 
-document.addEventListener("mousemove", Navbar)
+document.addEventListener("mousemove", Navbar);
 
-
+let timeouts = [];
 function Navbar(e){
-    let MouseY = e.clientY
-    console.log(e.clientX, MouseY)
+    let MouseY = e.clientY;
     if(window.scrollY > 20){
         if(MouseY <= 50){
-            ShowNavbar()
+            ShowNavbar();
+            for(let i = 0; i < timeouts.length; i++){
+                clearTimeout(timeouts.shift());
+            }
         }
-        else if(navbar.getAttribute("hidden") == null || navbar.getAttribute("hidden") == ""){
-            console.log('k')
-            HideNavbar()
+        else if((navbar.getAttribute("hidden") == null || navbar.getAttribute("hidden") == "") && timeouts.length < 1){
+            timeouts.push(setTimeout(HideNavbar, 2000));
         }
     }
 }
