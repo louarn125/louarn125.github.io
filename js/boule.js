@@ -34,7 +34,7 @@ class cadre {
         this.height = height;
     }
 }
-creer_boule(x, y, rayon) {
+function creer_boule(x, y, rayon) {
     var Div_boule = document.createElement('div');
     Div_boule.style.cssText = "width: 20px;height: 20px;border-radius: 50%;background-color: aqua;top: 10px;left: 10px; position: absolute; ";
     document.body.appendChild(Div_boule);
