@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="questionnaire.css" />
+        <script src="questionnaire.js"></script>
+    </head>
+    <body>
+        <div class="box_questions">
+            <p class="text_questions">
+                Je suis une question
+                <input type="checkbox" aria-label="question_test" />
+            </p>
+            <p class="text_qestions">
+                A quelle fréquence vous entrainez-vous ?
+                <select class="select_questions">
+                    <option selected>Selectionnez une option</option>
+                    <option value="1">Moins d'une heure par semaine</option>
+                    <option value="2">Entre 1h et 2h par semaine</option>
+                    <option value="3">Entre 2h et 3h par semaine</option>
+                    <option value="4">Entre 3h et 4h par semaine</option>
+                    <option value="5">Plus de 5h par semaine</option>
+                </select>
+            </p>
+            <p class="text_questions">
+                A quelle fréquence pourrez-vous vous entraîner ?
+                <select class="select_questions">
+                    <option selected>Selectionnez une option</option>
+                    <option value="1">Moins d'une heure par semaine</option>
+                    <option value="2">Entre 1h et 2h par semaine</option>
+                    <option value="3">Entre 2h et 3h par semaine</option>
+                    <option value="4">Entre 3h et 4h par semaine</option>
+                    <option value="5">Plus de 5h par semaine</option>
+                </select>
+            </p>
+
+            <form
+                id="box_pratique_sport"
+                class="text_questions"
+                onchange="sport_pratique()"
+            >
+                Avez-vous déjà pratiquer un sport ?
+                <input type="checkbox" aria-label="pratique_sport" />
+            </form>
+
+            <p class="test_questions" id="q_sport_pratique" hidden="true">
+                Lequel ?
+                <select class="custom-select custom-select-sm">
+                    <option selected>Selectionnez un sport</option>
+                    <option value="1">Sport de combat</option>
+                    <option value="2">Musculation</option>
+                    <option value="3">Gymnastique</option>
+                    <option value="4">Piscine</option>
+                    <option value="5">Sport de balle</option>
+                    <option value="6">Course à pied</option>
+                </select>
+            </p>
+        </div>
+    </body>
+</html>
