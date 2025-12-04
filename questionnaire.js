@@ -26,9 +26,7 @@ function load_xml_file() {
       // j'ai un truc
       ready_htpp_request = true;
       console.log("pas neuille");
-      let _xml_doc = xmlhttp.responseXML;
-      console.log(_xml_doc);
-      return _xml_doc.getElementsByTagName("data");
+      return xmlhttp.responseXML.getElementsByTagName("data");
     } else {
       console.log("neuille");
     }
