@@ -27,8 +27,12 @@ class boule {
     creer_boule(x, y, rayon) {
         var Div_boule = document.createElement('div');
         Div_boule.style.cssText = "width: 20px;height: 20px;border-radius: 50%;background-color: aqua;top: 10px;left: 10px; position: absolute; ";
+
+        Div_boule.draggable = "True";
+        Div_boule.setAttribute("ondragstart", "drag()")
         document.body.appendChild(Div_boule);
     }
+
 }
 
 class cadre {
@@ -39,13 +43,14 @@ class cadre {
         this.height = height;
     }
 }
-
+function drag() {
+    console.log("wiiwiw")
+}
 
 function init() {
     return new boule(50, 50, 30);
 }
 window.onload = function () {
     boule = init()
-
 }
 
