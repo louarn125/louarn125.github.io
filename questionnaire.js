@@ -9,18 +9,13 @@ function sport_pratique() {
 
     //console.log(xml_doc.getElementById("sport_pratique"));
     console.log(xml_doc.getElementsByTagName("sport_pratique"));
-    //console.log(xml_doc.childNodes.where((local_name = "sport_pratique")));
-    //console.log(xml_doc.children.getElementsByTagName("sport_pratique"));
+    for (xml_question in xml_doc.getElementsByTagName("sport_pratique")) {
+      var option = document.createElement("option", {
+        value: xml_question.getAttribute("id"),
+      });
 
-    // for (xml_question in get_element_in_childnode_list(
-    //   xml_doc.childNodes,
-    //   "sport_pratique",
-    // )) {
-    //   var option = document.createElement("option", {
-    //     value: xml_question.getAttribute("id"),
-    //   });
-
-    //element_to_show.appendChild(document.createElement(option));
+      element_to_show.appendChild(document.createElement(option));
+    }
   } else {
     document.getElementById("q_sport_pratique").hidden = true;
   }
