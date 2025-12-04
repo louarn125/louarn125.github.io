@@ -9,11 +9,11 @@ function sport_pratique() {
 
     //console.log(xml_doc.getElementById("sport_pratique"));
     console.log(xml_doc.getElementsByTagName("sport_pratique"));
-    for (xml_question in xml_doc.getElementsByTagName("sport_pratique")) {
-      console.log(xml_question);
-      console.log(xmlquestion.getAttribute("id"));
+    for (idx_xml_question in xml_doc.getElementsByTagName("sport_pratique")) {
+      console.log(idx_xml_question);
+      console.log(xml_doc[idx_xml_question].getAttribute("id"));
       var option = document.createElement("option", {
-        value: xml_question.getAttribute("id").nodeValue,
+        value: xml_doc[idx_xml_question].getAttribute("id").nodeValue,
       });
 
       element_to_show.appendChild(document.createElement(option));
@@ -34,14 +34,4 @@ function load_xml_file() {
   };
   xmlhttp.open("GET", "https://louarn125.github.io/questions.xml", true);
   xmlhttp.send();
-}
-
-function get_element_in_childnode_list(childnode_list, name) {
-  var list_of_element = [];
-  for (element in childnode_list) {
-    if (element.local_name == name) {
-      list_of_element.push(element);
-    }
-  }
-  return list_of_element;
 }
