@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data>
+	<sport>
+		<nom>Sport_combat</nom>
+		<equipe> 0</equipe>
+		<muscle> cardio</muscle>
+		<muscle>dos</muscle>
+		<muscle>bras</muscle>
+		<muscle>jambe</muscle>
+		<muscle>épaule</muscle>
+	</sport>
+	<sport>
+		<nom>Musculation</nom>
+		<equipe> 0</equipe>
+		<muscle> cardio</muscle>
+		<muscle>dos</muscle>
+		<muscle>bras</muscle>
+		<muscle>jambe</muscle>
+		<muscle>épaule</muscle>
+		<muscle>fessier</muscle>
+	</sport>
+	<sport>
+		<nom>Gymnastique</nom>
+		<equipe> 0</equipe>
+		<muscle> bras</muscle>
+		<muscle>jambe</muscle>
+		<muscle>cardio</muscle>
+	</sport>
+	<sport>
+		<nom>Piscine</nom>
+		<equipe> 0</equipe>
+		<muscle> bras</muscle>
+		<muscle>dos</muscle>
+		<muscle>jambe</muscle>
+		<muscle>cardio</muscle>
+		<muscle>épaule</muscle>
+		<muscle>fessier</muscle>
+	</sport>
+	<sport>
+		<nom>Sport_balle</nom>
+		<equipe> 1</equipe>
+		<muscle> jambe</muscle>
+		<muscle>épaule</muscle>
+		<muscle>fessier</muscle>
+		<muscle>cardio</muscle>
+	</sport>
+	<sport>
+		<nom>Course</nom>
+		<equipe> 0</equipe>
+		<muscle> jambe</muscle>
+		<muscle>fessier</muscle>
+		<muscle>cardio</muscle>
+	</sport>
+	<sport>
+		<nom>Sport_collectif</nom>
+		<equipe> 1</equipe>
+		<muscle> jambe</muscle>
+		<muscle>fessier</muscle>
+		<muscle>cardio</muscle>
+		<muscle>bras</muscle>
+	</sport>
+	<muscle>
+		<nom>Dos</nom>
+		<groupe> Haut</groupe>
+	</muscle>
+	<muscle>
+		<nom>Epaule</nom>
+		<groupe> Haut</groupe>
+	</muscle>
+	<muscle>
+		<nom>Pectoraux</nom>
+		<groupe> Haut</groupe>
+	</muscle>
+	<muscle>
+		<nom>Biceps</nom>
+		<groupe> Bras</groupe>
+	</muscle>
+	<muscle>
+		<nom>Triceps</nom>
+		<groupe> Bras</groupe>
+	</muscle>
+	<muscle>
+		<nom>Fessier</nom>
+		<groupe> Jambe</groupe>
+	</muscle>
+	<muscle>
+		<nom>Quadriceps</nom>
+		<groupe> Jambe</groupe>
+	</muscle>
+	<muscle>
+		<nom>Ischiojambier</nom>
+		<groupe> Jambe</groupe>
+	</muscle>
+	<mouvement>
+		<nom>pompe</nom>
+		<groupe> haut</groupe>
+		<groupe>bras</groupe>
+		<matériel> 0</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>squat</nom>
+		<groupe> jambe</groupe>
+		<matériel> 0</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>gainage</nom>
+		<groupe> haut</groupe>
+		<groupe>bras</groupe>
+		<matériel> 0</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>traction</nom>
+		<groupe> haut</groupe>
+		<groupe>bras</groupe>
+		<matériel> 1</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>abdo</nom>
+		<groupe> haut</groupe>
+		<matériel> 0</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>flexion</nom>
+		<groupe> jambe</groupe>
+		<matériel> 0</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>souleve de terre</nom>
+		<groupe> jambe</groupe>
+		<groupe>haut</groupe>
+		<matériel> 1</matériel>
+	</mouvement>
+	<mouvement>
+		<nom>curl</nom>
+		<groupe> bras</groupe>
+		<matériel> 1</matériel>
+	</mouvement>
+<data>
