@@ -8,6 +8,8 @@ function sport_pratique() {
     element_to_show.hidden = false;
 
     console.log(xml_doc);
+    console.log(xml_doc.childNodes);
+
     for (xml_question in xml_doc.childNodes.getElementsByTagName(
       "sport_pratique",
     )) {
