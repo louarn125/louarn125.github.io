@@ -19,7 +19,7 @@ function sport_pratique() {
       var option = document.createElement("option", {
         value: xml_doc
           .getElementsByTagName("sport_pratique")
-          [idx_xml_question].getAttribute("id").nodeValue,
+          [idx_xml_question].getAttribute("id"),
       });
       console.log(option);
       element_to_show.appendChild(document.createElement(option));
