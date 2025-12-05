@@ -23,7 +23,6 @@ function frame(){
     while(PositionsBoulles.length>2){
         PositionsBoulles.shift();
     }
-    console.log(PositionsBoulles);
 }
 
 function Move(e){
@@ -40,17 +39,14 @@ function Move(e){
 }
 
 function calcul_vecteur(){
-    console.log(PositionsBoulles);
     if(PositionsBoulles.length == 0){
         vecteur = [0,0];
     }else{
         vecteur = [(PositionsBoulles[1][0]-PositionsBoulles[0][0])/10,(PositionsBoulles[1][1]-PositionsBoulles[0][1])/5];
     }
-    console.log(vecteur[0], vecteur[1]);
 }
 
 function animation(){
-    console.log("test");
     let boulle = document.getElementById("boulle");
     vecteur[0]*=0.998;
     vecteur[1]*=0.995;
@@ -59,8 +55,7 @@ function animation(){
     boule_x+=vecteur[0];
     boulle.style.top = boule_y+"px";
     boulle.style.left = boule_x+"px";
-    console.log(window.innerHeight);
-    if(boulle.offsetTop+boulle.offsetHeight >= window.innerHeight || boulle.offsetLeft+boulle.offsetWidth >= window.innerWidth){
+    if(boulle.offsetTop+boulle.offsetHeight >= window.innerHeight || boulle.offsetLeft+boulle.offsetWidth >= window.innerWidth || collision()){
         boulle.style.left = "50px";
         boulle.style.bottom = "50px";
         boulle.style.top = "auto";
@@ -118,21 +113,25 @@ function rand(second_intervalle){
 function collision(){
     let boites = document.getElementsByClassName("valeur");
     let boulle = document.getElementById("boulle");
+    let cases = document.getElementById("cases");
     let pboul = [
     [boulle.offsetLeft,boulle.offsetTop],
     [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop],
     [boulle.offsetLeft,boulle.offsetTop+boulle.offsetHeight],
     [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop+boulle.offsetHeight]];
+
     let probleme;
-    for(let i in boites){
+    for(let i = 0;i< boites.length;i++){
             let pboit = [
-            [i.offsetLeft,i.offsetTop],
-            [i.offsetLeft+i.offsetWidth,i.offsetTop],
-            [i.offsetLeft,i.offsetTop+i.offsetHeight],
-            [i.offsetLeft+i.offsetWidth,i.offsetTop+i.offsetHeight]];
+            [cases.offsetLeft+boites[i].offsetLeft,5+boites[i].offsetTop],
+            [cases.offsetLeft+boites[i].offsetLeft+boites[i].offsetWidth,5+boites[i].offsetTop],
+            [cases.offsetLeft+boites[i].offsetLeft,5+boites[i].offsetTop+boites[i].offsetHeight],
+            [cases.offsetLeft+boites[i].offsetLeft+boites[i].offsetWidth,5+boites[i].offsetTop+boites[i].offsetHeight]];
             for(let j = 0;j<4;j++){
+
                 if(pboul[j][0]>=pboit[0][0] && pboul[j][0]<=pboit[1][0] && pboul[j][1]>=pboit[0][1] && pboul[j][1]<=pboit[1][1]){
                         probleme = i;
+                        console.log(j);
                         return true;
                 }
             }
