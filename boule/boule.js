@@ -60,7 +60,7 @@ function animation(){
     boulle.style.top = boule_y+"px";
     boulle.style.left = boule_x+"px";
     console.log(window.innerHeight);
-    if(boulle.offsetTop+boulle.offsetHeight >= window.innerHeight || boulle.offsetLeft+boulle.offsetWidth >= window.innerWidth){
+    if(boulle.offsetTop+boulle.offsetHeight >= window.innerHeight || boulle.offsetLeft+boulle.offsetWidth >= window.innerWidth || collision()){
         boulle.style.left = "50px";
         boulle.style.bottom = "50px";
         boulle.style.top = "auto";
@@ -113,4 +113,27 @@ function AttribuerValeurs(){
 
 function rand(second_intervalle){
     return Math.trunc(Math.random()*second_intervalle);
+}
+
+function collision(){
+    let boites = document.getElementsByClassName("valeur");
+    let boulle = document.getElementById("boulle");
+    let point_boulle = [
+    [boulle.offsetLeft,boulle.offsetTop],
+    [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop],
+    [boulle.offsetLeft,boulle.offsetTop+boulle.offsetHeight],
+    [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop+boulle.offsetHeight]];
+    let bad=false;
+    for(let i in boites){
+            let point_boite = [
+            [i.offsetLeft,i.offsetTop],
+            [i.offsetLeft+i.offsetWidth,i.offsetTop],
+            [i.offsetLeft,i.offsetTop+i.offsetHeight],
+            [i.offsetLeft+i.offsetWidth,i.offsetTop+i.offsetHeight]];
+            
+            if(){
+
+            }
+    }
+    return bad;
 }
