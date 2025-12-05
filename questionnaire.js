@@ -93,8 +93,90 @@ function create_exercice(d_total, groupes, equipement) {
 
 function load_page() {
   load_xml_file();
+  document.cookie += ";"; // pour que la fonction marche bien tqt
 }
 
 function encookization() {
-  document.cookie = newCookie;
+  //document.cookie = newCookie;
+
+  // fequence current
+  setCookie(
+    "frequence_current",
+    document.getElementById("select_frequence_current").value,
+    10,
+  );
+
+  // frequence promise
+  setCookie(
+    "frequence_promise",
+    document.getElementById("select_frequence_promise").value,
+    10,
+  );
+
+  // sport_pratique
+  setCookie(
+    "sport_pratique",
+    document.getElementById("box_sport_pratique").checked,
+    10,
+  );
+
+  // q_sport_pratique
+  setCookie(
+    "q_sport_pratique",
+    document.getElementById("q_sport_pratique").value,
+    10,
+  );
+
+  // raison_sport
+  setCookie(
+    "raison_sport",
+    document.getElementById("select_raison_sport").value,
+    10,
+  );
+
+  // competition
+  setCookie(
+    "competition",
+    document.getElementById("box_competition").checked,
+    10,
+  );
+
+  // cb_competition
+  setCookie(
+    "cb_competition",
+    document.getElementById("text_competition").textContent,
+    10,
+  );
+
+  // nv_competition
+  setCookie(
+    "nv_competition",
+    document.getElementById("select_competition").value,
+    10,
+  );
+
+  // next_comp
+  setCookie(
+    "next_competition",
+    document.getElementById("box_next_competition").checked,
+    10,
+  );
+
+  // q_next_comp
+  setCookie(
+    "nv_next_comb",
+    document.getElementById("q_next_competition").value,
+    10,
+  );
+  //alert(document.cookie);
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  //document.cookie = document.cookie + cname + "=" + cvalue + ";";
+  //document.cookie = "roux=2;";
+  //document.cookie = "caca=1;";
 }

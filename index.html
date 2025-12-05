@@ -7,15 +7,10 @@
     <body onload="load_page()">
         <div class="box_questions">
             <div>
-                <label for="1"> Je suis une question</label>
-                <input id="1" type="checkbox" aria-label="question_test" />
-            </div>
-
-            <div>
-                <label for="2">
+                <label for="select_frequence_current">
                     A quelle fréquence vous entrainez-vous ?
                 </label>
-                <select id="2" class="select_questions">
+                <select id="select_frequence_current">
                     <option selected>Selectionnez une option</option>
                     <option value="1">Moins d'une heure par semaine</option>
                     <option value="2">Entre 1h et 2h par semaine</option>
@@ -26,10 +21,10 @@
             </div>
 
             <div>
-                <label for="3">
+                <label for="select_frequence_promise">
                     A quelle fréquence pourrez-vous vous entraîner ?
                 </label>
-                <select class="select_questions" id="3">
+                <select id="select_frequence_promise">
                     <option selected>Selectionnez une option</option>
                     <option value="1">Moins d'une heure par semaine</option>
                     <option value="2">Entre 1h et 2h par semaine</option>
@@ -47,7 +42,7 @@
             </div>
 
             <div id="q_sport_pratique" hidden="true">
-                <label for="5"> Lequel ? </label>
+                <label for="select_q_sport_pratique"> Lequel ? </label>
                 <select
                     id="select_q_sport_pratique"
                     class="custom-select custom-select-sm"
@@ -57,7 +52,9 @@
             </div>
 
             <div>
-                <label for="6">Pourquoi voulez-vous pratiquer un sport ?</label>
+                <label for="select_raison_sport"
+                    >Pourquoi voulez-vous pratiquer un sport ?</label
+                >
                 <select
                     id="select_raison_sport"
                     class="custom-select custom-select-sm"
@@ -117,6 +114,7 @@
                     <option>Débutant</option>
                 </select>
             </div>
+            <button onclick="encookization()">save as cookie</button>
         </div>
     </body>
 </html>
