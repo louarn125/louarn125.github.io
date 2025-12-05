@@ -51,17 +51,12 @@
                 <label for="time_train">
                     Combien de temps avez-vous pour vous entrainer ?
                 </label>
-                <input                            <li class="nav-link">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                    type="text"
-                    id="text_competition"
-                    class="form-control"
-                    placeholder="(min)"
-                    aria-label="how many competitions?"
-                    aria-describedby="button-addon1"
-                    onchange="dynamic_change('competition')"
-                />
+                <select id="time_train" class="custom-select custom-select-sm">
+                    <option selected>Selectionnez une option</option>
+                    <option value="1">10min</option>
+                    <option value="2">20min</option>
+                    <option value="3">toute la journée</option>
+                </select>
             </div>
             <div>
                 <label for="select_groupe_muscu">
@@ -81,10 +76,8 @@
                     class="custom-select custom-select-sm"
                 >
                     <option selected>Selectionnez une option</option>
-                    <option value="1">Rien</option>
-                    <option value="2">Salle de sport</option>
-                    <option value="3">Haltères, élastiques</option>
-                    <option value="4">Parc extérieur</option>
+                    <option value="1">Oui</option>
+                    <option value="2">Non</option>
                 </select>
             </div>
             <button
