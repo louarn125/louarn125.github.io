@@ -118,22 +118,24 @@ function rand(second_intervalle){
 function collision(){
     let boites = document.getElementsByClassName("valeur");
     let boulle = document.getElementById("boulle");
-    let point_boulle = [
+    let pboul = [
     [boulle.offsetLeft,boulle.offsetTop],
     [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop],
     [boulle.offsetLeft,boulle.offsetTop+boulle.offsetHeight],
     [boulle.offsetLeft+boulle.offsetWidth,boulle.offsetTop+boulle.offsetHeight]];
-    let bad=false;
+    let probleme;
     for(let i in boites){
-            let point_boite = [
+            let pboit = [
             [i.offsetLeft,i.offsetTop],
             [i.offsetLeft+i.offsetWidth,i.offsetTop],
             [i.offsetLeft,i.offsetTop+i.offsetHeight],
             [i.offsetLeft+i.offsetWidth,i.offsetTop+i.offsetHeight]];
-            
-            if(){
-
+            for(let j = 0;j<4;j++){
+                if(pboul[j][0]>=pboit[0][0] && pboul[j][0]<=pboit[1][0] && pboul[j][1]>=pboit[0][1] && pboul[j][1]<=pboit[1][1]){
+                        probleme = i;
+                        return true;
+                }
             }
     }
-    return bad;
+    return false;
 }
