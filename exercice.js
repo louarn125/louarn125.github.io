@@ -24,7 +24,8 @@ function trie_mouvement(groupes, equipement) {
         idx_xml_question < xml_doc.getElementsByTagName("mouvement").length;
         idx_xml_question++
     ) {
-        if (equipement >= xml_doc.getElementsByTagName("mouvement")[idx_xml_question].getElementsByTagName("matériel")[0].textContent) {
+        let temp = xml_doc.getElementsByTagName("mouvement")[idx_xml_question].getElementsByTagName("matériel")[0].textContent == "Oui";
+        if (equipement >= temp) {
             for (groupe in groupes) {
                 for (
                     let idx_xml_groupe = 0;

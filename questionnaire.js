@@ -17,7 +17,7 @@ function flip_flop_name(name) {
         ">" +
         xml_doc
           .getElementsByTagName(name)
-        [idx_xml_question].getAttribute("nom") +
+          [idx_xml_question].getAttribute("nom") +
         " </option>";
     }
   } else {
@@ -45,7 +45,7 @@ function append_childs(name_of_parent, elements_name) {
       ">" +
       xml_doc
         .getElementsByTagName(elements_name)
-      [idx_xml_question].getElementsByTagName("nom")[0].innerHTML +
+        [idx_xml_question].getElementsByTagName("nom")[0].innerHTML +
       " </option>";
   }
 }
@@ -66,11 +66,25 @@ function load_xml_file(page) {
   xmlhttp.send();
 }
 function init(page) {
-  dynamic_charge_all();
+  // dynamic_charge_all();
   if (page == "questionnaire.html") {
+    dynamic_charge_all();
     append_childs("select_q_sport_pratique", "sport"); //et similaire si autre bdd pour réponse aux qcm
   } else if (page == "exercices.html") {
-    append_childs("select_groupe_muscu", "muscle");
+    for (
+      let idx_xml_question = 0;
+      idx_xml_question < xml_doc.getElementsByTagName("muscle").length;
+      idx_xml_question++
+    ) {
+      console.log(xml_doc.getElementsByTagName("muscle").length);
+      document.getElementById("select_groupe_muscu").innerHTML =
+        document.getElementById("select_groupe_muscu").innerHTML +
+        "<option id=" +
+        idx_xml_question +
+        ">" +
+        xml_doc.getElementsByTagName("muscle")[idx_xml_question].innerHTML +
+        " </option>";
+    }
   }
 }
 
