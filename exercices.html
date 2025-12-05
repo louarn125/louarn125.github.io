@@ -13,7 +13,7 @@
             crossorigin="anonymous"
         />
     </head>
-    <body>
+    <body onload="load_page('exercices.html')">
         <nav
             class="navbar navbar-expand-lg m-2"
             data-bs-theme="light"
@@ -50,18 +50,51 @@
             </div>
         </nav>
         <div class="box_questions">
-            Avant de commencer, vous devez remplir le questionnaire de
-            profilage:
-
+            <div>
+                <label for="time_train">
+                    Combien de temps avez-vous pour vous entrainer ?
+                </label>
+                <input
+                    type="text"
+                    id="text_competition"
+                    class="form-control"
+                    placeholder="(min)"
+                    aria-label="how many competitions?"
+                    aria-describedby="button-addon1"
+                    onchange="dynamic_change('competition')"
+                />
+            </div>
+            <div>
+                <label for="select_groupe_muscu">
+                    Quels muscules voulez-vous travailler ?
+                </label>
+                <select
+                    id="select_groupe_muscu"
+                    class="custom-select custom-select-sm"
+                ></select>
+            </div>
+            <div>
+                <label for="select_equipement">
+                    Avez-vous accès à de l'équipement ?
+                </label>
+                <select
+                    id="select_groupe_muscu"
+                    class="custom-select custom-select-sm"
+                >
+                    <option selected>Selectionnez une option</option>
+                    <option value="1">Rien</option>
+                    <option value="2">Salle de sport</option>
+                    <option value="3">Haltères, élastiques</option>
+                    <option value="4">Parc extérieur</option>
+                </select>
+            </div>
             <button
                 class="btn btn-outline-secondary"
                 type="button"
                 id="button-addon1"
                 onclick=""
             >
-                <a class="nav-link" href="questionnaire.html">
-                    Répondre au questionnaire
-                </a>
+                Sauvegarder
             </button>
         </div>
     </body>

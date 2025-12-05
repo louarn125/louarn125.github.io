@@ -13,7 +13,7 @@
             crossorigin="anonymous"
         />
     </head>
-    <body onload="load_page()">
+    <body onload="load_page('questionnaire.html')">
         <nav
             class="navbar navbar-expand-lg m-2"
             data-bs-theme="light"
@@ -27,8 +27,8 @@
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-link">
-                                <a class="nav-link" href="questionnaire.html"
-                                    >Questionnaire</a
+                                <a class="nav-link" href="exercices.html"
+                                    >Exercices</a
                                 >
                             </li>
                             <li class="nav-link">
@@ -90,6 +90,7 @@
                 <select
                     id="select_q_sport_pratique"
                     class="custom-select custom-select-sm"
+                    onload="append_childs('select_q_sport_pratique', 'sport')"
                 >
                     <option selected>Selectionnez un sport</option>
                 </select>
