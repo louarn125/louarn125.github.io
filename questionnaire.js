@@ -2,25 +2,13 @@ let ready_htpp_request = false;
 let xml_doc;
 
 function flip_flop_name(name) {
+  // console.log("bozo");
   if (document.getElementById("box_" + name).checked) {
     //console.log("q_" + name);
     let element_to_show = document.getElementById("q_" + name);
     element_to_show.hidden = false;
-    for (
-      let idx_xml_question = 0;
-      idx_xml_question < xml_doc.getElementsByTagName(name).length;
-      idx_xml_question++
-    ) {
-      document.getElementById("select_q_" + name).innerHTML =
-        document.getElementById("select_q_" + name).innerHTML +
-        "<option id=" +
-        idx_xml_question +
-        ">" +
-        xml_doc
-          .getElementsByTagName(name)
-          [idx_xml_question].getAttribute("nom") +
-        " </option>";
-    }
+
+    //console.log(name, ":", xml_doc.getElementsByTagName(name));
   } else {
     document.getElementById("q_" + name).hidden = true;
   }
@@ -30,6 +18,30 @@ function flip_flop_name(name) {
   );
 }
 
+function append_childs(name_of_parent, elements_name) {
+  console.log("appenning");
+  for (
+    let idx_xml_question = 0;
+    idx_xml_question < xml_doc.getElementsByTagName(elements_name).length;
+    idx_xml_question++
+  ) {
+    document.getElementById(name_of_parent).innerHTML =
+      document.getElementById(name_of_parent).innerHTML +
+      "<option id=" +
+      idx_xml_question +
+      ">" +
+      xml_doc
+        .getElementsByTagName(elements_name)
+        [idx_xml_question].getElementsByTagName("nom")[0].innerHTML +
+      " </option>";
+    console.log(
+      xml_doc
+        .getElementsByTagName(elements_name)
+        [idx_xml_question].getElementsByTagName("nom")[0],
+    );
+  }
+}
+
 function load_xml_file() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
@@ -37,12 +49,17 @@ function load_xml_file() {
       // j'ai un truc
       ready_htpp_request = true;
       xml_doc = xmlhttp.responseXML.getElementsByTagName("data")[0];
-      dynamic_charge_all();
+      init();
+
       //create_exercice(1000, ["haut"], 1);
     }
   };
   xmlhttp.open("GET", "https://louarn125.github.io/data.xml", true);
   xmlhttp.send();
+}
+function init() {
+  dynamic_charge_all();
+  append_childs("select_q_sport_pratique", "sport"); //et similaire si autre bdd pour réponse aux qcm
 }
 
 function dynamic_change(name) {
