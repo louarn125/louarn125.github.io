@@ -7,8 +7,26 @@ function flip_flop_name(name) {
     //console.log("q_" + name);
     let element_to_show = document.getElementById("q_" + name);
     element_to_show.hidden = false;
+<<<<<<< HEAD
 
     //console.log(name, ":", xml_doc.getElementsByTagName(name));
+=======
+    for (
+      let idx_xml_question = 0;
+      idx_xml_question < xml_doc.getElementsByTagName(name).length;
+      idx_xml_question++
+    ) {
+      document.getElementById("select_q_" + name).innerHTML =
+        document.getElementById("select_q_" + name).innerHTML +
+        "<option id=" +
+        idx_xml_question +
+        ">" +
+        xml_doc
+          .getElementsByTagName(name)
+        [idx_xml_question].getAttribute("nom") +
+        " </option>";
+    }
+>>>>>>> questionnaire
   } else {
     document.getElementById("q_" + name).hidden = true;
   }
