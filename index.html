@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="questionnaire.css" />
         <script src="questionnaire.js"></script>
     </head>
-    <body onload="load_xml_file()">
+    <body onload="load_page()">
         <div class="box_questions">
             <div>
                 <label for="1"> Je suis une question</label>
@@ -39,20 +39,82 @@
                 </select>
             </div>
 
-            <div onchange="sport_pratique()">
-                <label for="box_pratique_sport">
+            <div onchange="flip_flop_name('sport_pratique')">
+                <label for="box_sport_pratique">
                     Avez-vous déjà pratiquer un sport ?
                 </label>
-                <input
-                    type="checkbox"
-                    aria-label="pratique_sport"
-                    id="box_pratique_sport"
-                />
+                <input type="checkbox" id="box_sport_pratique" />
             </div>
+
             <div id="q_sport_pratique" hidden="true">
                 <label for="5"> Lequel ? </label>
-                <select class="custom-select custom-select-sm">
+                <select
+                    id="select_q_sport_pratique"
+                    class="custom-select custom-select-sm"
+                >
                     <option selected>Selectionnez un sport</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="6">Pourquoi voulez-vous pratiquer un sport ?</label>
+                <select
+                    id="select_raison_sport"
+                    class="custom-select custom-select-sm"
+                >
+                    <option selected>Veuillez sélectionner une raison</option>
+                    <option id="1">Perdre du poids</option>
+                    <option id="2">Prendre de la masse musculaire</option>
+                    <option id="3">Se préparer pour un évenement futur</option>
+                    <option id="4">Je ne souhaite pas répondre</option>
+                </select>
+            </div>
+            <div onchange="flip_flop_name('competition')">
+                <label for="box_competition"
+                    >Avez-vous déjà participé à des compétitions ?</label
+                >
+                <input type="checkbox" id="box_competition" />
+            </div>
+
+            <div id="q_competition" hidden="true">
+                <label for="text_competition">Combien ?</label>
+                <input
+                    type="text"
+                    id="text_competition"
+                    class="form-control"
+                    placeholder="2, 1, 4..."
+                    aria-label="how many competitions?"
+                    aria-describedby="button-addon1"
+                    onchange="dynamic_change('competition')"
+                />
+                <label for="select_competition">A quel niveau ?</label>
+                <select
+                    id="select_competition"
+                    class="custom-select custom-select-sm"
+                    onchange="dynamic_change_enums('competition')"
+                >
+                    <option selected>Veuillez sélectionner une raison</option>
+                    <option id="1">Professionnel</option>
+                    <option id="2">Raisonnable</option>
+                    <option id="3">Débutant</option>
+                </select>
+            </div>
+            <div onchange="flip_flop_name('next_competition')">
+                <label for="box_next_competition">
+                    Comptez-vous participer à des compétitions prochainements ?
+                </label>
+                <input type="checkbox" id="box_next_competition" />
+            </div>
+            <div id="q_next_competition" hidden="true">
+                <label for="select_next_competition"> A quel niveau ?</label>
+                <select
+                    for="select_next_competition"
+                    class="custom-select custom-select-sm"
+                >
+                    <option selected>Veuillez selectionner un niveau</option>
+                    <option>Professionnel</option>
+                    <option>Raisonnable</option>
+                    <option>Débutant</option>
                 </select>
             </div>
         </div>
