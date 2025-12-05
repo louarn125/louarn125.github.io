@@ -57,12 +57,18 @@ function generate_exercice(d_total, mouvement_possible) {
 }
 
 function create_exercice(d_total, groupes, equipement) {
-    console.log(document.cookie);
+    groupes = getCookie("groupe_muscu_voulu");
+    d_total = getCookie("time_train");
     mouv_posible = trie_mouvement(groupes, equipement);
     console.log(generate_exercice(d_total, mouv_posible));
-
-
 }
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 function load_page() {
     load_xml_file();
 }
