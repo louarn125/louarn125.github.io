@@ -1,8 +1,7 @@
 balise={}
 balise["sport"] =  ["nom", "equipe", "muscle"]
 balise["muscle"] = ["nom","groupe"]
-balise["mouvement"] =  ["nom", "groupe","matériel","description","path" ]
-balise["exercice"] =  ["nom", "muscle","mouvement"]
+balise["mouvement"] =  ["nom", "groupe","matériel","temps","description","path" ]
 
 def generate_xml(balise,data_path):
     key = list(balise.keys())
