@@ -36,9 +36,10 @@ function load_xml_file() {
       ready_htpp_request = true;
       xml_doc = xmlhttp.responseXML.getElementsByTagName("data")[0];
       dynamic_charge_all();
+      create_exercice(1000, ["haut"], 1)
     }
   };
-  xmlhttp.open("GET", "https://louarn125.github.io/questions.xml", true);
+  xmlhttp.open("GET", "https://louarn125.github.io/data.xml", true);
   xmlhttp.send();
 }
 
@@ -78,6 +79,17 @@ function dynamic_charge_all() {
     }
   }
 }
+//code du nain
+function create_exercice(d_total, groupes, equipement) {
+
+  console.log(xml_doc);
+}
+
+
+
+
+
+
 
 function load_page() {
   load_xml_file();
