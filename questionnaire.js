@@ -16,7 +16,9 @@ function flip_flop_name(name) {
         "<option id=" +
         idx_xml_question +
         ">" +
-        xml_doc.getElementsByTagName(name)[idx_xml_question].textContent +
+        xml_doc
+          .getElementsByTagName(name)
+        [idx_xml_question].getAttribute("nom") +
         " </option>";
     }
   } else {
@@ -36,7 +38,7 @@ function load_xml_file() {
       ready_htpp_request = true;
       xml_doc = xmlhttp.responseXML.getElementsByTagName("data")[0];
       dynamic_charge_all();
-      create_exercice(1000, ["haut"], 1)
+      //create_exercice(1000, ["haut"], 1);
     }
   };
   xmlhttp.open("GET", "https://louarn125.github.io/data.xml", true);
@@ -79,12 +81,19 @@ function dynamic_charge_all() {
     }
   }
 }
-
-
-
-
-
-
+//code du nain
+// function create_exercice(d_total, groupes, equipement) {
+//   console.log("roux");
+//   let mouv_posible = [];
+//   console.log(xml_doc.getElementsByTagName("mouvement"));
+//   for (mouv in xml_doc.getElementsByTagName(cardi"mouvement")) {
+//     console.log(xml_doc.getElementsByTagName("mouvement").getAttribute("matériel"));
+//     if (equipement >= xml_doc.getElementsByTagName("mouvement")[mouv].textContent) {
+//       mouv_posible.push(mouv);
+//     }
+//   }
+//   console.log(mouv_posible);
+// }
 
 function load_page() {
   load_xml_file();
