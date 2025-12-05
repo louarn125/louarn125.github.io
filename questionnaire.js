@@ -82,9 +82,7 @@ function dynamic_change(name) {
 function dynamic_change_enums(name) {
   localStorage.setItem(
     "_select_" + name,
-    document.getElementById("select_" + name).options[
-      document.getElementById("select_" + name).selectedIndex
-    ].value,
+    document.getElementById("select_" + name).value,
   );
 }
 
