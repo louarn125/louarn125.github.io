@@ -9,7 +9,7 @@ function load_xml_file() {
             // j'ai un truc
             ready_htpp_request = true;
             xml_doc = xmlhttp.responseXML.getElementsByTagName("data")[0];
-            create_exercice(1000, ["haut"], 0)
+            create_exercice(10, ["haut"], 1)
         }
     };
     xmlhttp.open("GET", "https://louarn125.github.io/data.xml", true);
@@ -42,18 +42,24 @@ function trie_mouvement(groupes, equipement) {
 
         }
     }
-    console.log(mouv_posible);
     return mouv_posible;
 }
 function generate_exercice(d_total, mouvement_possible) {
-    temps_exo = d_total % (mouvement_possible.length - 1)
+    temps_exo = Math.trunc(d_total / (mouvement_possible.length - 1));
+    result = []
+
     for (mouvement in mouvement_possible) {
-        mouvement.getElementsByTagName("groupe")
+        nom = mouvement_possible[mouvement].getElementsByTagName("nom")[0];
+        description = mouvement_possible[mouvement].getElementsByTagName("description")[0];
+        rep = Math.trunc(temps_exo / parseFloat(mouvement_possible[mouvement].getElementsByTagName("temps")[0].textContent));
+        result.push(nom, rep, description)
     }
+    return result;
 }
 
 function create_exercice(d_total, groupes, equipement) {
-    mouv_posible = trie_mouvement(groupes, equipement)
+    mouv_posible = trie_mouvement(groupes, equipement);
+    console.log(generate_exercice(d_total, mouv_posible));
 
 
 }
