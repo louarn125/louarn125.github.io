@@ -1,26 +1,25 @@
-Sport_combat| 0| cardio/dos/bras/jambe/épaule
-Musculation| 0| cardio/dos/bras/jambe/épaule/fessier
-Gymnastique| 0| bras/jambe/cardio
-Piscine| 0| bras/dos/jambe/cardio/épaule/fessier
-Sport_balle| 1| jambe/épaule/fessier/cardio
-Course| 0| jambe/fessier/cardio
-Sport_collectif| 1| jambe/fessier/cardio/bras
+Sport_combat|0|cardio/dos/bras/jambe/épaule
+Musculation|0|cardio/dos/bras/jambe/épaule/fessier
+Gymnastique|0|bras/jambe/cardio
+Piscine|0|bras/dos/jambe/cardio/épaule/fessier
+Sport_balle|1|jambe/épaule/fessier/cardio
+Course|0|jambe/fessier/cardio
+Sport_collectif|1|jambe/fessier/cardio/bras
 ;
-Dos| Haut
-Epaule| Haut
-Pectoraux| Haut
-Biceps| Bras
-Triceps| Bras
-Fessier| Jambe
-Quadriceps| Jambe
-Ischiojambier| Jambe
+Dos|Haut
+Epaule|Haut
+Pectoraux|Haut
+Biceps|Bras
+Triceps|Bras
+Fessier|Jambe
+Quadriceps|Jambe
+Ischiojambier|Jambe
 ;
-pompe| haut/bras| 0|ube fois en position il faut fléchir les coudes et se redrésser en gardant le dos aligné avec les jambes.
-squat| jambe| 0|- Le regard doit être droit, fixé sur un point à hauteur des yeux, pour ouvrir la cage thoracique. Le dos doit garder sa courbure naturelle pour permettre une bonne contraction des abdominaux.- A la flexion, les genoux ne doivent pas être trop en avant et les fesses doivent reculer, tout en gardant le dos droit. Tête et colonne doivent être parfaitement alignées.- En descendant, les cuisses doivent être parallèles au sol. Pour remonter, il faut pousser fort sur les jambes, puis revenir à la position de départ. Il ne faut jamais courber le dos, au risque de provoquer des blessures.Pour accompagner le mouvement, inspirez avant de descendre, puis expirez longuement à la remontée
-gainage| haut/bras| 0|le corps doit être tendu, la tête est dans l’alignement de la colonne vertébrale, les mains sont à plat avec les doigts vers l’avant et l’espacement des paumes de mains est d’environ deux largeurs d’épaules. Une fois en position, vous devez descendre votre corps vers le sol en pliant vos coudes, puis de le remonter en poussant sur vos bras, vous devez veiller à garder votre position : tête, épaules, bassin, genoux et chevilles doivent être alignés.
-traction| haut/bras| 1| Le positionnement des mains peut varier pour focaliser certain point, une fois la barre agrippé il faut se hisser jusqu'à avoir le menton au dessus de la barre.
-gainage| haut| 0| placez-vous sur les avants bras et sur les pieds. Maintenez la position avec le dos plat et bassin en rétroversion. La respiration est lente et contrôlée, ventre rentré pour l’engagement du muscle transverse.
-crunch|haut|0|Allongé·e sur le dos, les mains derrière la tête pour soulager la nuque, contractez la partie supérieure des abdos (au-dessus du nombril) pour décoller les épaules puis les omoplates. Revenez en position initiale en posant les omoplates puis les épaules sur le tapis.
-fente| jambe| 0|faites un pas en avant en gardant la jambe arrière tendue. Debout, descendez vers le sol jusqu'à ce que le genou de la jambe positionnée à l’arrière touche presque le sol, et les haltères vos chevilles, puis remontez et revenez en position initiale.
-souleve de terre| jambe/haut| 1
-curl| bras| 1
+pompe|haut/bras|0|0.1|ube fois en position il faut fléchir les coudes et se redrésser en gardant le dos aligné avec les jambes.
+squat|jambe|0|0.1|-Le regard doit être droit, fixé sur un point à hauteur des yeux, pour ouvrir la cage thoracique. Le dos doit garder sa courbure naturelle pour permettre une bonne contraction des abdominaux.- A la flexion, les genoux ne doivent pas être trop en avant et les fesses doivent reculer, tout en gardant le dos droit. Tête et colonne doivent être parfaitement alignées.- En descendant, les cuisses doivent être parallèles au sol. Pour remonter, il faut pousser fort sur les jambes, puis revenir à la position de départ. Il ne faut jamais courber le dos, au risque de provoquer des blessures.Pour accompagner le mouvement, inspirez avant de descendre, puis expirez longuement à la remontée
+traction|haut/bras|1|0.1|Le positionnement des mains peut varier pour focaliser certain point, une fois la barre agrippé il faut se hisser jusqu'à avoir le menton au dessus de la barre.
+gainage|haut|0|1|placez-vous sur les avants bras et sur les pieds. Maintenez la position avec le dos plat et bassin en rétroversion. La respiration est lente et contrôlée, ventre rentré pour l’engagement du muscle transverse.
+crunch|haut|0|0.1|Allongé·e sur le dos, les mains derrière la tête pour soulager la nuque, contractez la partie supérieure des abdos (au-dessus du nombril) pour décoller les épaules puis les omoplates. Revenez en position initiale en posant les omoplates puis les épaules sur le tapis.
+fente|jambe|0|0.1|faites un pas en avant en gardant la jambe arrière tendue. Debout, descendez vers le sol jusqu'à ce que le genou de la jambe positionnée à l’arrière touche presque le sol, et les haltères vos chevilles, puis remontez et revenez en position initiale.
+soulevedeterre|jambe/haut|1|0.1
+curl|bras|1|0.1

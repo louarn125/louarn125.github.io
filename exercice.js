@@ -48,7 +48,7 @@ function trie_mouvement(groupes, equipement) {
 function generate_exercice(d_total, mouvement_possible) {
     temps_exo = d_total % (mouvement_possible.length - 1)
     for (mouvement in mouvement_possible) {
-
+        mouvement.getElementsByTagName("groupe")
     }
 }
 
